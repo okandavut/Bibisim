@@ -1,0 +1,17 @@
+.columns{
+    margin:10%;
+}
+
+.second {
+    margin-top:-1%;
+}
+.image-pasif{
+    background-color:red;
+    width: 48px;
+    height: 48px;
+}
+.image-aktif{
+    background-color:green;
+    width: 48px;
+    height: 48px;
+}

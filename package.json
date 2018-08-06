@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bulma": "^0.7.1",
+    "bulma-extensions": "^2.2.1",
+    "moment": "^2.22.2",
     "react": "^16.4.2",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4"
+    "react-helmet": "^5.2.0",
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
