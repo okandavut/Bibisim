@@ -1,20 +1,24 @@
 .columns{
     margin:10%;
-    margin-top:5%;
+    margin-top:3%;
 }
 .loading{
     margin-top:10%;
     font-size: 50px;
 }
+.headerText{
+    margin-top:2%;
+    font-size: 40px !important;
+}
 .second {
     margin-top:-1%;
 }
-.image-pasif{
+.image-passive{
     background-color:red;
     width: 48px;
     height: 48px;
 }
-.image-aktif{
+.image-active{
     background-color:green;
     width: 48px;
     height: 48px;
