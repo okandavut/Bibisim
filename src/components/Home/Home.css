@@ -1,7 +1,11 @@
 .columns{
     margin:10%;
+    margin-top:5%;
 }
-
+.loading{
+    margin-top:10%;
+    font-size: 50px;
+}
 .second {
     margin-top:-1%;
 }
@@ -14,4 +18,10 @@
     background-color:green;
     width: 48px;
     height: 48px;
+}
+.card-css{
+    height: 210px !important;
+}
+.yazi{
+    font-size: 20px !important;
 }
