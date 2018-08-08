@@ -10,13 +10,13 @@ export interface State {}
 
 class Home extends Component<Props, State> {
   render() {
-return (
+    if (this.props.isLoading == true) {
+      return <div className="loading">Loading...</div>;
+    } else {
+      return (
         <div>
-        
-       
           <div className="headerText">
-            Bisim Aktif - Pasif ve Bisiklet Durumu 
-            {/* {(this.props.isLoading) == true?  <span>Loading...</span> : "" } */}
+            Bisim Aktif - Pasif ve Bisiklet Durumu
           </div>
           <div className="columns is-multiline is-mobile">
             {this.props.stations.map(item => (
@@ -54,6 +54,6 @@ return (
       );
     }
   }
-
+}
 
 export default Home;
