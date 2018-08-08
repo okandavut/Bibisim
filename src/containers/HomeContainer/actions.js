@@ -23,15 +23,12 @@ export function setError(exceptıon: Object) {
 
 export function getStations() {
   return dispatch => {
-    dispatch(setIsLoading(true));
     fetch("https://api.citybik.es/v2/networks/baksi-bisim")
       .then(res => res.json())
       .then(result => {
         dispatch(setStations(result.network.stations));
-        dispatch(setIsLoading(false));
       }).catch(error => {
         dispatch(setError(error));
-        dispatch(setIsLoading(false));
       });
   };
 }

@@ -7,7 +7,7 @@ const initialState = {
   stations : []
 };
 
-export default function(state: any = state, action: Function) {
+export default function(state: any = initialState, action: Function) {
   switch (action.type) {
     case types.IS_LOADING:
       return {
@@ -27,6 +27,7 @@ export default function(state: any = state, action: Function) {
       }
       default:
       return {
-        ...state      }
+        ...state  
+      }
   }
 }

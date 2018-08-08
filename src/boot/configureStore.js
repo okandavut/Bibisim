@@ -10,12 +10,12 @@ const persistConfiguration = {
   storage: storage
 };
 
-const cpersistReducer = persistReducer(persistConfiguration, reducers);
+const persistorReducer = persistReducer(persistConfiguration, reducers);
 const logger = createLogger({});
 
 export default function configureStore(onComplete: () => void): any {
   const reduxCompose = compose(applyMiddleware(thunk, logger));
-  const store = createStore(cpersistReducer, reduxCompose);
+  const store = createStore(persistorReducer, reduxCompose);
   let storePersistor = persistStore(store);
 
   return { store, storePersistor };

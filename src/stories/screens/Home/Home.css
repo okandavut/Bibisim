@@ -1,13 +1,14 @@
 .columns{
     margin:10%;
-    margin-top:3%;
+    margin-top:1%;
 }
 .loading{
     margin-top:10%;
     font-size: 50px;
 }
 .headerText{
-    margin-top:2%;
+    margin-top:1%;
+    margin-left:29%;
     font-size: 40px !important;
 }
 .second {
