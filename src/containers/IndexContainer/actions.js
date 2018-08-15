@@ -7,10 +7,10 @@ export function setIsLoading(isLoading: boolean) {
   }
 }
 
-export function setStations(stations: Array<Object>) {
+export function setNetworks(networks: Array<Object>) {
   return {
-    stations: stations,
-    type: types.SET_STATIONS
+    networks: networks,
+    type: types.SET_NETWORKS
   };
 }
 
@@ -21,12 +21,12 @@ export function setError(exceptıon: Object) {
   };
 }
 
-export function getStations(id) {
+export function getNetworks() {
   return dispatch => {
-    fetch("https://api.citybik.es/v2/networks/"+id)
+    fetch("https://api.citybik.es/v2/networks")
       .then(res => res.json())
       .then(result => {
-        dispatch(setStations(result.network.stations));
+        dispatch(setNetworks(result.networks));
       }).catch(error => {
         dispatch(setError(error));
       });

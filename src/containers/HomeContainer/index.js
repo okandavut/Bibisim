@@ -14,8 +14,9 @@ export interface State {}
 class HomeContainer extends React.Component<Props, State> {
   componentDidMount() {
     this.props.setIsLoading(true);
+    const { id } = this.props.match.params
   setTimeout(() => {
-    this.props.getStations();
+    this.props.getStations(id);
     this.props.setIsLoading(false);
     this.interval = setInterval(() => this.props.getStations(), 5000);
   }, 3000);
@@ -35,7 +36,7 @@ class HomeContainer extends React.Component<Props, State> {
 }
 function bindAction(dispatch) {
   return {
-    getStations: () => dispatch(getStations()),
+    getStations: (id) => dispatch(getStations(id)),
     setIsLoading: (state) => dispatch(setIsLoading(state))
   };
 }

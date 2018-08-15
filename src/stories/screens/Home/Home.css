@@ -31,3 +31,13 @@
 .yazi{
     font-size: 20px !important;
 }
+
+.homeVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+    margin: 0;
+    object-fit: fill;
+}

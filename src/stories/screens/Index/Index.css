@@ -1,0 +1,75 @@
+
+
+.homeVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+    margin: 0;
+    object-fit: fill;
+}
+
+.content {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.media {
+    height: 0px;
+    padding-top: '56.25%'
+  }
+
+  .carddiv{
+      width: 50%;
+      float: left;
+  }
+
+.card {
+    width: -webkit-fill-available;
+margin: 20px;
+  }
+
+  .selectdiv{
+     width: 100%
+  }
+  
+
+.content ul{
+    margin-left: 0px;
+}
+
+.content h1{
+    color: white;
+}
+
+.sub-content{
+    text-align: center;
+}
+
+.titlem{
+    color: #fff
+}
+
+.mapMarker{
+    font-size: 0px;
+    font-weight: bold;
+    color: red;
+}
+
+.dropdown {
+    width: 200px;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dropdown:hover {
+    background: #ddd;
+    color: black;
+}
