@@ -18,7 +18,7 @@ class HomeContainer extends React.Component<Props, State> {
   setTimeout(() => {
     this.props.getStations(id);
     this.props.setIsLoading(false);
-    this.interval = setInterval(() => this.props.getStations(), 5000);
+    this.interval = setInterval(() => this.props.getStations(), 500000);//5dakikada bir kontrol
   }, 3000);
     
     

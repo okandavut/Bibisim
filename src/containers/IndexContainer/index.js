@@ -18,7 +18,7 @@ class IndexContainer extends React.Component<Props, State> {
       if (this.props.networks.length === 0) {
         this.props.getNetworks();
         this.props.setIsLoading(false);
-        this.interval = setInterval(() => this.props.getNetworks(), 5000);
+        this.interval = setInterval(() => this.props.getNetworks(), 500000);
       }
     }, 3000);
   }

@@ -1,19 +1,13 @@
 import React,{ Component } from "react";
 import "bulma/css/bulma.css";
 import "./Index.css";
-import { width } from "window-size";
 import Select, { Option } from "rc-select";
 import "rc-select/assets/index.css";
 import { Redirect } from 'react-router';
 import GoogleMapReact from "google-map-react";
 
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
 export interface Props {
@@ -58,7 +52,7 @@ class Index extends Component<Props, State> {
         var link = "/home/"+this.state.value
         return <Redirect push to={link} />;
     }
-    if (this.props.isLoading == true) {
+    if (this.props.isLoading === true) {
       return <div className="loading">Loading...</div>;
     } else {
       var networks = this.props.networks;
@@ -66,7 +60,7 @@ class Index extends Component<Props, State> {
       if (networks.length > 0) {
         var limitedNetworks = [];
         for (let index = 0; index < 20; index++) {
-        var link = "/home/"+networks[index].id
+        var cardLink = "/home/"+networks[index].id
           limitedNetworks.push(
             <div key={index} className="carddiv">
               <Card className="card">
@@ -91,7 +85,7 @@ class Index extends Component<Props, State> {
                 <CardContent>
                   <Typography gutterBottom variant="headline" component="h3">
                   {}
-                    <a href={link}>
+                    <a href={cardLink}>
                       {networks[index].location.city} -{" "}
                       {networks[index].location.country}
                     </a>
@@ -128,7 +122,7 @@ class Index extends Component<Props, State> {
                 ei. Id qui nemore latine molestiae, ad mutat oblique
                 delicatissimi pro.
               </p>
-              <div class="selectdiv">
+              <div className="selectdiv">
                 <Select
                   id="my-select"
                   value={this.state.value}
