@@ -1,7 +1,7 @@
 
 ## BiBisim App
 
-With this application, you can check the availability of bicycles in the Bisim bicycle stops in Izmir.
+With this application, you can check the availability of bicycles bicycle stops in the all over the world.
 
 The application was developed using the following technologies.
 
@@ -34,9 +34,10 @@ $ npm install
 * [redux-thunk](https://github.com/gaearon/redux-thunk) 
 
 ### Screenshoots
-
-![PageScreenshoot_1](https://image.ibb.co/b3LOT9/image.png)
-
+##### HomePage
+![PageScreenshoot_1](https://preview.ibb.co/cEhpFp/bibisim.png)
+##### DetailPage
+![PageScreenshoot_1](https://preview.ibb.co/nuRo89/bibisim2.png)
 
 ## License
 This project is licensed under the MIT License
