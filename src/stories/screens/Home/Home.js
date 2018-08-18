@@ -11,6 +11,7 @@ import Badge from '@material-ui/core/Badge';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { Grid } from "../../../../node_modules/@material-ui/core";
 
 export interface Props {
   stations: [];
@@ -25,6 +26,7 @@ class Home extends Component<Props, State> {
     } else {
       return (
         <div>
+        <Grid container spacing={24}>
            <video
             className="homeVideo"
             ref={v => {
@@ -35,9 +37,10 @@ class Home extends Component<Props, State> {
             muted
             loop
           />
-          <div className="columns is-multiline is-mobile">
+          <Grid item xs={12}>
             {this.props.stations.map((item,index) => {
               return(
+                <Grid item xs={12} sm={12} md={6}>
             <div key={index} className="carddiv">
             <Card className="card">
               <div style={{ height: "200px", width: "100%" }}>
@@ -61,33 +64,26 @@ class Home extends Component<Props, State> {
                   </a>
                 </Typography>
               </CardContent>
-              <AppBar position="static" style= {styles.margin}>
-        <Tabs centered value={2}>
-          <Tab selected={true}
-            label={
-              <Badge style={styles.padding} color="secondary" badgeContent={item.extra.slots}>
+              <div className="badgets">
+              <Badge style={styles.padding} className="badge" color="secondary" badgeContent={item.extra.slots}>
                 Total Bike Slot
               </Badge>
-            }
-          />
-          <Tab selected={true}
-            label={
-              <Badge style={styles.padding} color="secondary" badgeContent={item.empty_slots}>
+              <br/>
+              <Badge style={styles.padding} className="badge" color="secondary" badgeContent={item.empty_slots}>
                 Empty Bike Slot
               </Badge>
-            } />
-          <Tab selected={true} label={
-              <Badge style={styles.padding} color="secondary" badgeContent={item.free_bikes}>
+              <br/>
+              <Badge style={styles.padding} className="badge" color="secondary" badgeContent={item.free_bikes}>
                 Free Bike Count
               </Badge>
-            } />
-        </Tabs>
-      </AppBar>
+              </div>
             </Card>
           </div>
+          </Grid>
             )
     })}
-          </div>
+    </Grid>
+        </Grid>
         </div>
       );
     }

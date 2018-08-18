@@ -41,3 +41,22 @@
     margin: 0;
     object-fit: fill;
 }
+
+@media (min-width: 600px) {
+    .MuiGrid-grid-sm-12-152 {
+      flex-grow: 0;
+      width: 50%;
+      float: left;
+      flex-basis: 100%;
+    }
+  }
+
+.badgets{
+    margin: -15px 10px 15px 15px;
+    color: dimgray;
+    font-weight: bold;
+}
+.MuiBadge-badge-250 {
+    top: 0px !important; 
+    right: -26px !important;
+}
