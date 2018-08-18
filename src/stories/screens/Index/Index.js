@@ -9,6 +9,7 @@ import GoogleMapReact from "google-map-react";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import { Grid } from "../../../../node_modules/@material-ui/core";
 
 export interface Props {
   networks: [];
@@ -62,6 +63,7 @@ class Index extends Component<Props, State> {
         for (let index = 0; index < 20; index++) {
         var cardLink = "/home/"+networks[index].id
           limitedNetworks.push(
+            <Grid item xs={12} sm={12} md={6}>
             <div key={index} className="carddiv">
               <Card className="card">
                 <div style={{ height: "200px", width: "100%" }}>
@@ -96,11 +98,13 @@ class Index extends Component<Props, State> {
                 </CardContent>
               </Card>
             </div>
+            </Grid>
           );
         }
       }
       return (
         <div>
+          <Grid container spacing={24}>
           <video
             className="homeVideo"
             ref={v => {
@@ -111,7 +115,7 @@ class Index extends Component<Props, State> {
             muted
             loop
           />
-
+<Grid item xs={12}>
           <div className="content">
             <div className="sub-content">
               <h1>Bibisim</h1>
@@ -154,11 +158,14 @@ class Index extends Component<Props, State> {
               </div>
             </div>
           </div>
+          </Grid>
+          <Grid item xs={12}>
           {limitedNetworks}
+          </Grid>
+          </Grid>
         </div>
       );
     }
   }
 }
-
 export default Index;

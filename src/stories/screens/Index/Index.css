@@ -1,75 +1,76 @@
-
-
 .homeVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 100%; 
-    height: 100%;
-    margin: 0;
-    object-fit: fill;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: fill;
 }
 
 .content {
-    position: sticky;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 20px;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
 }
 
 .media {
-    height: 0px;
-    padding-top: '56.25%'
-  }
-
-  .carddiv{
-      width: 50%;
-      float: left;
-  }
+  height: 0px;
+  padding-top: "56.25%";
+}
 
 .card {
-    width: -webkit-fill-available;
-margin: 20px;
-  }
-
-  .selectdiv{
-     width: 100%
-  }
-  
-
-.content ul{
-    margin-left: 0px;
+  width: -webkit-fill-available;
+  margin: 20px;
 }
 
-.content h1{
-    color: white;
+.selectdiv {
+  width: 100%;
 }
 
-.sub-content{
-    text-align: center;
+.content ul {
+  margin-left: 0px;
 }
 
-.titlem{
-    color: #fff
+.content h1 {
+  color: white;
 }
 
-.mapMarker{
-    font-size: 0px;
-    font-weight: bold;
-    color: red;
+.sub-content {
+  text-align: center;
+}
+
+.titlem {
+  color: #fff;
+}
+
+.mapMarker {
+  font-size: 0px;
+  font-weight: bold;
+  color: red;
 }
 
 .dropdown {
-    width: 200px;
-    font-size: 18px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
+  width: 200px;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 .dropdown:hover {
-    background: #ddd;
-    color: black;
+  background: #ddd;
+  color: black;
+}
+
+@media (min-width: 600px) {
+  .MuiGrid-grid-sm-12-152 {
+    flex-grow: 0;
+    width: 50%;
+    float: left;
+    flex-basis: 100%;
+  }
 }
