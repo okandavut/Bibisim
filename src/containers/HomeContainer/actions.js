@@ -21,14 +21,14 @@ export function setError(exceptıon: Object) {
   };
 }
 
-export function getStations() {
-  return dispatch => {
-    fetch("https://api.citybik.es/v2/networks/baksi-bisim")
-      .then(res => res.json())
-      .then(result => {
-        dispatch(setStations(result.network.stations));
-      }).catch(error => {
-        dispatch(setError(error));
-      });
-  };
+export function getStations(id) {
+    return dispatch => {
+      fetch("https://api.citybik.es/v2/networks/"+id)
+        .then(res => res.json())
+        .then(result => {
+          dispatch(setStations(result.network.stations));
+        }).catch(error => {
+          dispatch(setError(error));
+        });
+    };
 }
